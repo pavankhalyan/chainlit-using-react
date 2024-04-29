@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RecoilRoot } from 'recoil';
+import { ChainlitAPI } from '@chainlit/react-client';
+import ChatSession from './Components/ChatSession';
+import ChatMessages from './Components/ChatMessages';
+import ChatInteract from './Components/ChatInteract';
+import ChatData from './Components/ChatData';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <RecoilRoot>
     <App />
+    <ChatSession />
+    <ChatMessages />
+    <ChatInteract /> 
+    <ChatData />
+    </RecoilRoot>
   </React.StrictMode>
 );
 
